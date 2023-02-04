@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   content: { fontSize: 18, paddingBottom: 10 },
   footer: {
-    paddingBottom:50,
+    paddingBottom:20,
     height: 120,
     width: windowWidth,
     position: "absolute",

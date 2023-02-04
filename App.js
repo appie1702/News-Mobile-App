@@ -7,9 +7,9 @@ import Context,{ NewsContext } from './API/Context';
 
 function App() {
   const {dark} = useContext(NewsContext);
-  StatusBar.setBarStyle('light-content', true);
+  StatusBar.setBarStyle('dark-content', true);
   return (
-    <SafeAreaView style={{flex:1, backgroundColor : dark? '#282C35':'white', marginTop:StatusBar.currentHeight}}>
+    <SafeAreaView style={{flex:1, backgroundColor : dark? '#282C35':'white'}}>
         <NewsTab/>
     </SafeAreaView>
   );

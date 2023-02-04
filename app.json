@@ -4,10 +4,10 @@
     "slug": "NewsApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/news-icon.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/news-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
