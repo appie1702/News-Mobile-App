@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
+import React, { useContext } from 'react';
+import NewsTab from './components/NewsTabs';
+import Context,{ NewsContext } from './API/Context';
 
-export default function App() {
+
+
+function App() {
+  const {dark} = useContext(NewsContext);
+  StatusBar.setBarStyle('light-content', true);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{flex:1, backgroundColor : dark? '#282C35':'white', marginTop:StatusBar.currentHeight}}>
+        <NewsTab/>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default ()=>{
+  return(
+  <Context>
+    <App/>
+  </Context>
+  )
+}
